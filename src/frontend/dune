@@ -1,0 +1,10 @@
+(executable
+ (name main)
+ (modules main)
+ (modes
+  (byte exe))
+ (libraries core fmt ast parsing typing)
+ (preprocess
+  (pps ppx_jane bisect_ppx --conditional))
+ (lint
+  (pps ppx_js_style -annotated-ignores -styler -pretty -dated-deprecation)))

@@ -1,0 +1,7 @@
+(library
+ (name typing)
+ (public_name typing)
+ (inline_tests)
+ (libraries fmt parsing)
+ (preprocess
+  (pps ppx_inline_test ppx_deriving.show)))

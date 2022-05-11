@@ -1,0 +1,5 @@
+(test
+ (name spice)
+ (libraries base)
+ (preprocess
+  (pps ppx_inline_test)))
