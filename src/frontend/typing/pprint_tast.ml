@@ -7,7 +7,7 @@ let indent_space = "   "
 let rec pprint_expr ppf ~indent expr =
   let print_expr = Fmt.pf ppf "%sExpr: %s@." indent in
   let rec typ_to_string = function
-    | TVar { contents = Unbound (tname, _) } -> "TVar: %s" ^ tname
+    | TVar { contents = Unbound (tname, _) } -> "TVar: " ^ tname
     | TVar { contents = Link typ } -> typ_to_string typ
     | TArrow (t1, t2, _) ->
         "TArrow: " ^ typ_to_string t1 ^ " -> " ^ typ_to_string t2
