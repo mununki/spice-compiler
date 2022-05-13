@@ -2,6 +2,8 @@
 
 Tiny compiler consists of Lexer, Parser, Type checker written in OCaml.
 
+The type inference implemetation is mostly from the sound_lazy in https://okmij.org/ftp/ML/generalization.html and modified for the purpose of typing the parsetree (AST) from the parser.
+
 ## Example
 
 Source

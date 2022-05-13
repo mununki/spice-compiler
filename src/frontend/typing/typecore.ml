@@ -1,4 +1,8 @@
-(* open Ast.Asttypes *)
+(*
+  Type inference codes are mostly from the sound_lazy implementation in
+  https://okmij.org/ftp/ML/generalization.html
+*)
+
 open Parsing.Parsetree
 
 type level = int [@@deriving show]
