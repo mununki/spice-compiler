@@ -1,6 +1,5 @@
 (library
  (name typing)
- (public_name typing)
  (inline_tests)
  (libraries fmt parsing)
  (preprocess

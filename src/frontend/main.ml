@@ -32,7 +32,7 @@ let () =
       in
       match typedtree with
       | Ok tt -> Type_program.pprint_typed_ast Format.std_formatter tt
-      | Error error -> pprint_error (Error.to_string_hum error))
+      | Error error -> pprint_error (Base.Error.to_string_hum error))
   | None -> pprint_error "need file to compile"
 
 (* TEST *)

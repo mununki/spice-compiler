@@ -29,5 +29,5 @@ let%test _ =
   let typedtree = lexbuf |> Parse.parse_program >>= type_program in
   (match typedtree with
   | Ok tt -> pprint_typed_ast Format.std_formatter tt
-  | Error error -> pprint_error (Error.to_string_hum error));
+  | Error error -> pprint_error (Base.Error.to_string_hum error));
   true
